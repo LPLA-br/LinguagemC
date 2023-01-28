@@ -1,0 +1,11 @@
+gcc -c a.c -o a.o
+ar rcs liba.a a.o
+gcc -static main.c -o main -L. -la
+			         ^nome_da_lib
+Executável criado, a biblioteca faz parte de seu
+programa agora.
+Opção -L em que dirétorio está tua biblioteca
+para poder linkar, não necessário se sua ela
+está instalada no sistema.
+Crie um pacote .deb para sua biblioteca para fa-
+cilitar a instalação e desinstalação dela.

@@ -1,0 +1,3 @@
+/home/luiz/Programação/C/exemplos/cmake/build/CMakeFiles/rebuild_cache.dir
+/home/luiz/Programação/C/exemplos/cmake/build/CMakeFiles/edit_cache.dir
+/home/luiz/Programação/C/exemplos/cmake/build/CMakeFiles/myexample.dir

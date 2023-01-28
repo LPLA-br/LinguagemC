@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/myexample.dir/main.c.o -o myexample 

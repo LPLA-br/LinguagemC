@@ -1,0 +1,5 @@
+gcc -c -fPIC foo.c -o foo.o
+gcc -shared foo.o -o libfoo.so
+gcc -L/home/luiz/Programação/C/exemplos/bibliotecas/dinâmica -Wl,-rpath=/home/luiz/Programação/C/exemplos/bibliotecas/dinâmica main.c -o main -lfoo
+	Se a biblioteca dinâmica está instalada então:
+gcc main.c -o main -lfoo
