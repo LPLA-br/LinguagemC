@@ -34,6 +34,8 @@ bool eZero(int num);
 /*função ponteiro*/
 bool (* apontar)(int) = eZero;
 
+void ponteirosEControles(void);
+
 int main( int argc, char *argv[] )
 {
 	char *cadeiaDeCaracteres = " teste\0";
@@ -50,6 +52,8 @@ int main( int argc, char *argv[] )
 	**letrapntpnt = 'd';
 	printf("\n %c", **letrapntpnt);
 
+
+
 	Documento registro1 = {13, 'v'};
 	printf("\n estrutura %i %c", registro1.numero, registro1.caractere);
 
@@ -61,10 +65,14 @@ int main( int argc, char *argv[] )
 	registropnt2->numero++; /*funciona como*/
 	printf("\n ponteiro %i %c", registropnt->numero, registropnt->caractere);
 
+
+
 	struct comum localAMain = {true}; /*sem typedef*/
 	printf("\n 2 estruturas globais e uma local %b %b (%b)", estado.val, estado2.val, localAMain.val);
 
 	printf("\n %b", apontar(4));
+
+
 
 	Nomes grupo1;
 	grupo1.nome = malloc(10*sizeof(int)); /*duas notações distintas para alocação*/
@@ -97,3 +105,21 @@ bool eZero(int num)
 	}
 }
 
+void ponteirosEControles(void)
+{
+
+    /* VALOR=MUTÁVEL  ENDEREÇO=MUTÁVEL */
+    char* demostracaoA = "aaa\0";
+
+    /* VALOR=IMÚTAVEL ENDEREÇO=MÚTAVEL */
+    const char* demostracaoB = "bbb\0";
+
+    /* VALOR=MÚTAVEL ENDEREÇO=IMÚTAVEL */
+    char* const demostracaoC = "ccc\0";
+
+    /* VALOR=IMÚTAVEL ENDEREÇO=IMÚTAVEL */
+    const char* const demostracaoD = "ddd\0";
+
+    /*UNISTD.H*/
+    char* const nome[10] = "teste\0";
+}
